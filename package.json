@@ -1,0 +1,19 @@
+{
+  "name": "scooter-rental-tests",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Cross-repository API, end-to-end, smoke and performance tests for Scooter Rent Kandy",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test:api": "node --test \"api/**/*.test.mjs\"",
+    "test:smoke": "node --test \"smoke/**/*.test.mjs\"",
+    "test:e2e": "playwright test",
+    "perf": "node performance/read-endpoints.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
+  }
+}
